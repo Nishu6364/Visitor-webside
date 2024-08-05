@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+<title>Tour India Sign up Form</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="./vendor/jquery/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<style type="text/css">
+	body {
+		color: #fff;
+		background: #4c535d;
+		font-family: 'Roboto', sans-serif;
+	}
+	.form-container {
+		width: 450px;
+		margin: 0 auto;
+		padding: 30px 0;
+	}
+    table.form-table {
+        width: 100%;
+    }
+    table.form-table td {
+        padding: 10px;
+    }
+	.signup-form {
+		color: #9ba5a8;
+		border-radius: 3px;
+		background: #fff;
+		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+		padding: 30px;
+	}
+	.signup-form h2 {
+		color: #333;
+		font-weight: bold;   
+    }
+	.signup-form .form-group {
+		margin-bottom: 20px;
+	}
+	.signup-form .btn {        
+		font-size: 16px;
+		font-weight: bold;
+		background: #5fcaba;
+		border: none;
+		min-width: 140px;
+	}
+	.signup-form .btn:hover, .signup-form .btn:focus {
+		background: #3fc0ad;
+	}
+	.signup-form a {
+		color: #fff;
+		text-decoration: underline;
+	}
+	.signup-form form a {
+		color: #5fcaba;
+		text-decoration: none;
+	}	
+	.signup-form form a:hover {
+		text-decoration: underline;
+	}
+</style>
+</head>
+<body>
+<div class="form-container">
+    <form action="" method="post" class="signup-form">
+        <h2>Sign Up</h2>
+        <hr>
+        <table class="form-table">
+            <tr>
+                <td><label for="name">Name:</label></td>
+                <td><input type="text" id="name" name="name" required pattern="[A-Za-z\s]{2,50}" title="Valid name should contain only letters and spaces (2-50 characters)." maxlength="50"></td>
+            </tr>
+            <tr>
+                <td><label for="mobile">Mobile Number:</label></td>
+                <td><input type="text" id="mobile" name="mobile" required pattern="[0-9]{10,12}" title="Enter a valid 10 to 12 digit mobile number"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Enter a valid email address (e.g., example@example.com)"></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password:</label></td>
+                <td><input type="password" id="password" name="password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$" title="Password must contain at least 8 characters, including at least one digit, one lowercase letter, one uppercase letter, and one special character (!@#$%^&*)."></td>
+            </tr>
+        </table>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block btn-lg">Sign Up</button>
+        </div>
+        <p class="small text-center">By clicking the Sign Up button, you agree to our <br><a href="#">Terms &amp; Conditions</a>, and <a href="#">Privacy Policy</a>.</p>
+    </form>
+    <div class="text-center">Already have an account? <a href="./login.html">Login here</a>
+    <!-- Popup Message (hidden by default) -->
+    <div id="popup-message" class="popup-message" style="display: none;">
+        <p>Thank you for signing up on this website!</p>
+    </div>
+</div>
+
+</body>
+<<script>
+    function validateForm() {
+        // Check the registration logic here.
+
+        // For a successful registration, show the popup message.
+        document.getElementById('popup-message').style.display = 'block';
+
+        return false;
+</html>
